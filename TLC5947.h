@@ -25,15 +25,15 @@ typedef struct TLC5947_channel_pair {
 
 class TLC5947 {
     public:
-    TLC5947(uint8_t latch_pin);
-    void begin();
-    void channel(uint8_t chan, uint16_t value);
-    uint16_t channel(uint8_t);
-    void update();
+        TLC5947(uint8_t latch_pin);
+        void begin();
+        void channel(uint8_t chan, uint16_t value);
+        uint16_t channel(uint8_t);
+        void update();
     TLC5947_channel_pair_t pair[12];
-    private:
+    protected:
     
-    uint8_t _latch;
+        uint8_t _latch;
 };
 
 
